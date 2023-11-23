@@ -12,19 +12,13 @@ services:
     working_dir: /opt/app
     depends_on:
       - mongo
-    networks:
-    - demonetwork  
-	volumes: 
-	- mongodbvolume
+     
+	
 
   mongo:
     image: mongo
     environment:
     - MONGO_INITDB_ROOT_USERNAME=mongodb
     - MONGO_INITDB_ROOT_PASSWORD=mongo@123
-    volumes:
-      - mongodbvolume:/data/db
-   # restart: always
-    networks:
-    - demonetwork
+   
     
