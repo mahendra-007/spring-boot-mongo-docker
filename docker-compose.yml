@@ -14,6 +14,8 @@ services:
       - mongo
     networks:
     - demonetwork  
+	volumes: 
+	- mongodbvolume
 
   mongo:
     image: mongo
